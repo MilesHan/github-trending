@@ -56,7 +56,7 @@ def scrape(language, filename):
 
 def job():
     strdate = datetime.datetime.now().strftime('%Y-%m-%d')
-    filename = '{date}-monthly.md'.format(date=strdate)
+    filename = 'monthly/{date}-monthly.md'.format(date=strdate)
 
     # create markdown file
     createMarkdown(strdate, filename)
@@ -86,16 +86,16 @@ if __name__ == '__main__':
     job()
 
 # 每月的最后1天
-# 0 0 L * * *   python3 scraper-monthly.py
+# 0 0 L * * *   python3 /data/github-trending/monthly/scraper-monthly.py
 
 # 每周日早上6点更新
-# 0 6 * * 0 *   python3 scraper-weekly.py
+# 0 6 * * 0 *   python3 /data/github-trending/weekly/scraper-weekly.py
 
 # 每天早上6点更新
-# 0 6 * * * *   python3 scraper.py
+# 0 6 * * * *   python3 /data/github-trending/daily/scraper.py
 
-
-19 17 * * * python3 scraper.py
+# 写入日志 /data/github-trending 
+# 21 17 * * * python3 /data/github-trending/weekly/scraper-weekly.py  > /data/github-trending/weekly.log
 
 # https://open.itc.cn/  这个网站有收录，但是不好看
 
