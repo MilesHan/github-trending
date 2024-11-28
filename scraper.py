@@ -67,7 +67,6 @@ def job():
     scrape('typescript', filename)
     scrape('php', filename)
     scrape('vue', filename)
-    scrape('html+php', filename)
     scrape('html', filename)
     scrape('css', filename)
     scrape('python', filename)
