@@ -85,17 +85,17 @@ def job():
 if __name__ == '__main__':
     job()
 
-# 每月的最后1天
+# # 每月的最后1天
 # 0 0 L * * *   python3 /data/github-trending/monthly/scraper-monthly.py
 
-# 每周日早上6点更新
+# # 每周日早上6点更新
 # 0 6 * * 0 *   python3 /data/github-trending/weekly/scraper-weekly.py
 
-# 每天早上6点更新
+# # 每天早上6点更新
 # 0 6 * * * *   python3 /data/github-trending/daily/scraper.py
 
-# 写入日志 /data/github-trending 
-# 21 17 * * * python3 /data/github-trending/weekly/scraper-weekly.py  > /data/github-trending/weekly.log
+# # 写入日志 /data/github-trending 
+# 41 17 * * * python3 /data/github-trending/scraper.py > /data/github-trending/weekly.log 2>&1
 
 # https://open.itc.cn/  这个网站有收录，但是不好看
 
